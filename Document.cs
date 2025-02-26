@@ -18,10 +18,10 @@ namespace DocumentApp
     {
       Console.WriteLine($"Имя документа: {Name}");
       Console.WriteLine($"Автор документа: {Author}");
-      Console.WriteLine($"Ключевые слова: ");
+      Console.Write($"Ключевые слова: ");
       foreach (var word in Keywords)
       {
-        Console.Write($"{word}\t");
+        Console.Write($"{word} ");
       }
       Console.WriteLine($"\nТема документа: {Theme}");
       Console.WriteLine($"Путь документа: {PathDoc}");
