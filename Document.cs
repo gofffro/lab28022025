@@ -23,7 +23,7 @@ namespace DocumentApp
       {
         Console.Write($"{word}\t");
       }
-      Console.WriteLine($"Тема документа: {Theme}");
+      Console.WriteLine($"\nТема документа: {Theme}");
       Console.WriteLine($"Путь документа: {PathDoc}");
     }
   }
