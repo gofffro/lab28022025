@@ -48,4 +48,25 @@ namespace DocumentApp
       Console.WriteLine($"Количество слов: {WordCount}");
     }
   }
+
+  public class PdfDocument : Document
+  {
+    public int PageCount { get; set; }
+
+    public PdfDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int pageCount)
+    {
+      Name = name;
+      Author = author;
+      Keywords = keywords;
+      Theme = theme;
+      PathDoc = pathDoc;
+      PageCount = pageCount;
+    }
+
+    public override void DisplayInfo()
+    {
+      base.DisplayInfo();
+      Console.WriteLine($"Количество страниц: {PageCount}");
+    }
+  }
 }
