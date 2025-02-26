@@ -8,11 +8,11 @@ namespace DocumentApp
 {
   public class Document
   {
-    public required string Name { get; set; }
-    public required string Author { get; set; }
+    public string Name { get; set; }
+    public string Author { get; set; }
     public List<string> Keywords { get; set; } = new List<string>();
-    public required string Theme { get; set; }
-    public required string PathDoc { get; set; }
+    public string Theme { get; set; }
+    public string PathDoc { get; set; }
 
     public virtual void DisplayInfo()
     {
