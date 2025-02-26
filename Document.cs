@@ -69,4 +69,67 @@ namespace DocumentApp
       Console.WriteLine($"Количество страниц: {PageCount}");
     }
   }
+
+  public class ExcelDocument : Document
+  {
+    public int SheetCount { get; set; }
+
+    public ExcelDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int sheetCount)
+    {
+      Name = name;
+      Author = author;
+      Keywords = keywords;
+      Theme = theme;
+      PathDoc = pathDoc;
+      SheetCount = sheetCount;
+    }
+
+    public override void DisplayInfo()
+    {
+      base.DisplayInfo();
+      Console.WriteLine($"Количество листов: {SheetCount}");
+    }
+  }
+
+  public class TxtDocument : Document
+  {
+    public int SymbolCount { get; set;}
+
+    public TxtDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int symbolCount)
+    {
+      Name = name;
+      Author = author;
+      Keywords = keywords;
+      Theme = theme;
+      PathDoc = pathDoc;
+      SymbolCount = symbolCount;
+    }
+
+    public override void DisplayInfo()
+    {
+      base.DisplayInfo();
+      Console.WriteLine($"Количество символов: {SymbolCount}");
+    }
+  }
+
+  public class HtmlDocument : Document
+  {
+    public int TagCount { get; set; }
+
+    public HtmlDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int tagCount)
+    {
+      Name = name;
+      Author = author;
+      Keywords = keywords;
+      Theme = theme;
+      PathDoc = pathDoc;
+      TagCount = tagCount;
+    }
+
+    public override void DisplayInfo()
+    {
+      base.DisplayInfo();
+      Console.WriteLine($"Количество тегов: {TagCount}");
+    }
+  }
 }
