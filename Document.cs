@@ -26,26 +26,26 @@ namespace DocumentApp
       Console.WriteLine($"Тема документа: {Theme}");
       Console.WriteLine($"Путь документа: {PathDoc}");
     }
+  }
 
-    public class WordDocument : Document
+  public class WordDocument : Document
+  {
+    public int WordCount { get; set; }
+
+    public WordDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int wordCount)
     {
-      public int WordCount { get; set; }
+      Name = name;
+      Author = author;
+      Keywords = keywords;
+      Theme = theme;
+      PathDoc = pathDoc;
+      WordCount = wordCount;
+    }
 
-      public WordDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int wordCount)
-      {
-        Name = name;
-        Author = author;
-        Keywords = keywords;
-        Theme = theme;
-        PathDoc = pathDoc;
-        WordCount = wordCount;
-      }
-
-      public override void DisplayInfo()
-      {
-        base.DisplayInfo();
-        Console.WriteLine($"Количество слов: {WordCount}");
-      }
+    public override void DisplayInfo()
+    {
+      base.DisplayInfo();
+      Console.WriteLine($"Количество слов: {WordCount}");
     }
   }
 }
