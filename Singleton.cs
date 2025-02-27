@@ -38,5 +38,17 @@ namespace DocumentApp
         Console.WriteLine($"[{indexDoc}] {documents[indexDoc].Name} (Путь: {documents[indexDoc].PathDoc})");
       }
     }
+
+    public void DisplayDocInfo(int indexDoc)
+    {
+      if (indexDoc >= 0 && indexDoc < documents.Count)
+      {
+        documents[indexDoc].DisplayInfo();
+      }
+      else
+      {
+        Console.WriteLine("Неверный индекс");
+      }
+    }
   }
 }
