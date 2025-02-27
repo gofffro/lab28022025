@@ -8,42 +8,43 @@ namespace DocumentApp
 {
   public class SingletonDocument
   {
-    private static SingletonDocument instance;
-    private List<Document> documents;
+    private static SingletonDocument _instance;
+    private List<Document> _documents;
 
     private SingletonDocument()
     {
-      documents = new List<Document>();
+      _documents = new List<Document>();
     }
 
     public static SingletonDocument GetInstance()
     {
-      if (instance == null)
+      if (_instance == null)
       {
-        instance = new SingletonDocument();
+        _instance = new SingletonDocument();
       }
-      return instance;
+      return _instance;
     }
 
     public void AddDocument(Document document)
     {
-      documents.Add(document);
+      _documents.Add(document);
     }
 
     public void ListAllDocuments()
     {
       Console.WriteLine("Список документов: ");
-      for (int indexDoc = 0; indexDoc < documents.Count; ++indexDoc)
+
+      for (int indexDoc = 0; indexDoc < _documents.Count; ++indexDoc)
       {
-        Console.WriteLine($"[{indexDoc}] {documents[indexDoc].Name} (Путь: {documents[indexDoc].PathDoc})");
+        Console.WriteLine($"[{indexDoc}] {_documents[indexDoc].Name} (Путь: {_documents[indexDoc].DocumentPath})");
       }
     }
 
     public void DisplayDocInfo(int indexDoc)
     {
-      if (indexDoc >= 0 && indexDoc < documents.Count)
+      if (indexDoc >= 0 && indexDoc < _documents.Count)
       {
-        documents[indexDoc].DisplayInfo();
+        _documents[indexDoc].DisplayInfo();
       }
       else
       {
