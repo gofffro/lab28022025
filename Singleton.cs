@@ -30,11 +30,13 @@ namespace DocumentApp
       documents.Add(document);
     }
 
-    public void RemoveDocument(Document document)
+    public void ListAllDocuments()
     {
-      documents.Remove(document);
+      Console.WriteLine("Список документов: ");
+      for (int indexDoc = 0; indexDoc < documents.Count; ++indexDoc)
+      {
+        Console.WriteLine($"[{indexDoc}] {documents[indexDoc].Name} (Путь: {documents[indexDoc].PathDoc})");
+      }
     }
-
-    
   }
 }
