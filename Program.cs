@@ -26,7 +26,9 @@
             AddDoc(docManager);
             break;
           case "2":
+            Console.WriteLine();
             docManager.ListAllDocuments();
+            Console.WriteLine();
             break;
           case "3":
             SelectDocument(docManager);
