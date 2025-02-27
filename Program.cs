@@ -17,6 +17,7 @@
         Console.WriteLine("2. Список документов");
         Console.WriteLine("3. Выбрать документ");
         Console.WriteLine("4. Выйти");
+        Console.Write("Ввод: ");
         userInput = Console.ReadLine();
 
         switch (userInput)
@@ -96,12 +97,44 @@
       Console.Write("Введите индекс документа для просмотра информации: ");
       if (int.TryParse(Console.ReadLine(), out int indexDoc))
       {
+        Console.WriteLine();
         docManager.DisplayDocInfo(indexDoc);
+        Console.WriteLine();
       }
       else
       {
         Console.WriteLine("Ошибка!");
       }
-    } 
+    }
+
+    static int GetWordCount()
+    {
+      Console.Write("Введите количество слов: ");
+      return int.Parse(Console.ReadLine());
+    }
+
+    static int GetPageCount()
+    {
+      Console.Write("Введите количество страниц: ");
+      return int.Parse(Console.ReadLine());
+    }
+
+    static int GetSheetCount()
+    {
+      Console.Write("Введите количество листов: ");
+      return int.Parse(Console.ReadLine());
+    }
+
+    static int GetSymbolCount()
+    {
+      Console.Write("Введите количество символов: ");
+      return int.Parse(Console.ReadLine());
+    }
+
+    static int GetTagCount()
+    {
+      Console.Write("Введите количество тегов: ");
+      return int.Parse(Console.ReadLine());
+    }
   }
 }
