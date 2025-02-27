@@ -24,5 +24,17 @@ namespace DocumentApp
       }
       return instance;
     }
+
+    public void AddDocument(Document document)
+    {
+      documents.Add(document);
+    }
+
+    public void RemoveDocument(Document document)
+    {
+      documents.Remove(document);
+    }
+
+    
   }
 }
