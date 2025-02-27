@@ -19,6 +19,25 @@ namespace DocumentApp
         Console.WriteLine("3. Выбрать документ");
         Console.WriteLine("4. Выйти");
         userInput = Console.ReadLine();
+
+        switch (userInput)
+        {
+          case "1":
+            AddDoc(docManager);
+            break;
+          case "2":
+            docManager.ListAllDocuments();
+            break;
+          case "3":
+            SelectDocument(docManager);
+            break;
+          case "4":
+            Console.WriteLine();
+            break;
+          default:
+            Console.WriteLine("Ошибка. Попробуйте снова");
+            break;
+        }
       } while (userInput != "4");
     }
   }
