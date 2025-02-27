@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace DocumentApp
 {
-  public class Singleton
+  public class SingletonDocument
   {
+    private static SingletonDocument instance;
+    private List<Document> documents;
+
+    private SingletonDocument()
+    {
+      documents = new List<Document>();
+    }
+
+    public static SingletonDocument GetInstance()
+    {
+      if (instance == null)
+      {
+        instance = new SingletonDocument();
+      }
+      return instance;
+    }
   }
 }
