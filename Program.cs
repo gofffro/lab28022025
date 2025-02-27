@@ -1,5 +1,4 @@
-﻿
-namespace DocumentApp
+﻿namespace DocumentApp
 {
   internal class Program
   {
@@ -90,7 +89,19 @@ namespace DocumentApp
         docManager.AddDocument(doc);
         Console.WriteLine("Документ добавлен.");
       }
-
     }
+
+    static void SelectDocument(SingletonDocument docManager)
+    {
+      Console.Write("Введите индекс документа для просмотра информации: ");
+      if (int.TryParse(Console.ReadLine(), out int indexDoc))
+      {
+        docManager.DisplayDocInfo(indexDoc);
+      }
+      else
+      {
+        Console.WriteLine("Ошибка!");
+      }
+    } 
   }
 }
