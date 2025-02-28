@@ -24,7 +24,7 @@ namespace DocumentApp
         Console.Write($"{word} ");
       }
       Console.WriteLine($"\nТема документа: {Theme}");
-      Console.WriteLine($"Путь документа: {PathDoc}");
+      Console.WriteLine($"Путь к документу: {PathDoc}");
     }
   }
 
@@ -93,7 +93,7 @@ namespace DocumentApp
 
   public class TxtDocument : Document
   {
-    public int SymbolCount { get; set;}
+    public int SymbolCount { get; set; }
 
     public TxtDocument(string name, string author, List<string> keywords, string theme, string pathDoc, int symbolCount)
     {
