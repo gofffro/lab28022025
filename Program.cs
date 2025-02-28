@@ -7,6 +7,7 @@
       SingletonDocument docManager = SingletonDocument.GetInstance();
       ShowMenu(docManager);
     }
+
     static void ShowMenu(SingletonDocument docManager)
     {
       string userInput;
@@ -26,9 +27,7 @@
             AddDoc(docManager);
             break;
           case "2":
-            Console.WriteLine();
             docManager.ListAllDocuments();
-            Console.WriteLine();
             break;
           case "3":
             SelectDocument(docManager);
@@ -48,19 +47,19 @@
       Console.Write("Введите имя документа: ");
       string name = Console.ReadLine();
 
-      Console.Write("Введите автора документа: ");
+      Console.Write("Введите имя автора документа: ");
       string author = Console.ReadLine();
 
-      Console.Write("Введите ключевые слова через запятую например: (классика, драма): ");
+      Console.Write("Введите ключевые слова через запятую, например, 'классика, драма': ");
       List<string> keywords = new List<string>(Console.ReadLine().Split(','));
 
-      Console.Write("Введите тему документа: ");
+      Console.Write("Введите название темы документа: ");
       string theme = Console.ReadLine();
 
       Console.Write("Введите путь к документу: ");
       string pathDoc = Console.ReadLine();
 
-      Console.Write("Выберите тип документа ([1]Word, [2]PDF, [3]Excel, [4]TXT, [5]HTML): ");
+      Console.Write("1. Word\n2. PDF\n3. Excel\n4. TXT\n5. HTML\nВыберите тип документа: ");
       string docType = Console.ReadLine();
 
       Document doc = null;
