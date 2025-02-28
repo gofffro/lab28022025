@@ -36,7 +36,7 @@ namespace DocumentApp
 
       for (int indexDoc = 0; indexDoc < _documents.Count; ++indexDoc)
       {
-        Console.WriteLine($"[{indexDoc}] {_documents[indexDoc].Name} (Путь: {_documents[indexDoc].PathDoc})");
+        Console.WriteLine($"\n[{indexDoc}] {_documents[indexDoc].Name} (Путь: {_documents[indexDoc].PathDoc})\n");
       }
     }
 
