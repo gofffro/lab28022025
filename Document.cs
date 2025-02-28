@@ -19,9 +19,9 @@ namespace DocumentApp
       Console.WriteLine($"Имя документа: {Name}");
       Console.WriteLine($"Автор документа: {Author}");
       Console.Write($"Ключевые слова: ");
-      foreach (var word in Keywords)
+      for (int wordIndex = 0; wordIndex < Keywords.Count; ++wordIndex)
       {
-        Console.Write($"{word} ");
+        Console.Write($"{Keywords[wordIndex]} ");
       }
       Console.WriteLine($"\nТема документа: {Theme}");
       Console.WriteLine($"Путь к документу: {PathDoc}");
