@@ -1,5 +1,8 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DocumentApp
 {
@@ -19,10 +22,10 @@ namespace DocumentApp
 
     public void ListAllDocuments()
     {
-      Console.WriteLine("Список документо: ");
+      Console.WriteLine("РЎРїРёСЃРѕРє РґРѕРєСѓРјРµРЅС‚РѕРІ: ");
       for (int indexDoc = 0; indexDoc < _documents.Count; ++indexDoc)
       {
-        Console.WriteLine($"\n[{indexDoc}] {_documents[indexDoc].Name} (Путь: {_documents[indexDoc].PathDoc})\n");
+        Console.WriteLine($"\n[{indexDoc}] {_documents[indexDoc].Name} (РџСѓС‚СЊ: {_documents[indexDoc].PathDoc})\n");
       }
     }
 
@@ -34,7 +37,7 @@ namespace DocumentApp
       }
       else
       {
-        Console.WriteLine("Неверный индекс");
+        Console.WriteLine("РќРµРІРµСЂРЅС‹Р№ РёРЅРґРµРєСЃ");
       }
     }
   }
