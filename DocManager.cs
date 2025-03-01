@@ -19,7 +19,7 @@ namespace DocumentApp
 
     public void ListAllDocuments()
     {
-      Console.WriteLine("Список документов: ");
+      Console.WriteLine("Список документо: ");
       for (int indexDoc = 0; indexDoc < _documents.Count; ++indexDoc)
       {
         Console.WriteLine($"\n[{indexDoc}] {_documents[indexDoc].Name} (Путь: {_documents[indexDoc].PathDoc})\n");
